@@ -91,6 +91,11 @@ MedicalRecordNumberField = TemporaryIdentifierField(
                 "align": "left",
                 "label": _(u"MRN"),
             }, {
+                "name": "testid",
+                "width": "25",
+                "align": "left",
+                "label": _(u"Test Id"),
+            },
                 "name": "firstname",
                 "width": "25",
                 "align": "left",
@@ -108,6 +113,20 @@ MedicalRecordNumberField = TemporaryIdentifierField(
             },
         ],
         limit=3,
+    )
+)
+
+TestIdField = ExtTextField(
+    "TestId",
+    read_permission=View,
+    write_permission=FieldEditTestId,
+    widget=TextAreaWidget(
+        label=_("Test Id"),
+        render_own_label=True,
+        rows=1,
+        visible={
+            "add": "edit",
+        }
     )
 )
 

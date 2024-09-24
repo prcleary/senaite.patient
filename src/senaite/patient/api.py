@@ -148,6 +148,7 @@ def update_patient(patient, **values):
     """
     # set values explicitly
     patient.setMRN(values.get("mrn", api.get_id(patient)))
+    patient.setTestid(values.get("testid", ""))
     patient.setFirstname(values.get("firstname", ""))
     patient.setMiddlename(values.get("middlename", ""))
     patient.setLastname(values.get("lastname", ""))

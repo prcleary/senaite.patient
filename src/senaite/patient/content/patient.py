@@ -110,6 +110,12 @@ class IPatientSchema(model.Schema):
         description=_(u"Patient Medical Record Number"),
         required=True,
     )
+    
+    testid = schema.TextLine(
+        title=_(u"label_patient_testid", default=u"Test ID"),
+        description=_(u"Patient test ID"),
+        required=False,
+    )
 
     directives.widget(
         "identifiers",
@@ -440,6 +446,19 @@ class Patient(Container):
 
         mutator = self.mutator("mrn")
         return mutator(self, api.safe_unicode(value))
+
+    @security.protected(permissions.View)
+    def getTestid(self):
+        accessor = self.accessor("testid")
+        value = accessor(self) or ""
+        return value.encode("utf-8")
+
+    @security.protected(permissions.ModifyPortalContent)
+    def setTestid(self, value):
+        if not isinstance(value, string_types):
+            value = u""
+        mutator = self.mutator("testid")
+        mutator(self, api.safe_unicode(value.strip()))
 
     @security.protected(permissions.View)
     def getIdentifiers(self):
