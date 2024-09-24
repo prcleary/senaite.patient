@@ -95,7 +95,7 @@ MedicalRecordNumberField = TemporaryIdentifierField(
                 "width": "25",
                 "align": "left",
                 "label": _(u"Test Id"),
-            },
+            }, {
                 "name": "firstname",
                 "width": "25",
                 "align": "left",
