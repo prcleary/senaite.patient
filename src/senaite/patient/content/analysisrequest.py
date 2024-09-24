@@ -47,6 +47,7 @@ from senaite.patient.permissions import FieldEditFullName
 from senaite.patient.permissions import FieldEditGender
 from senaite.patient.permissions import FieldEditMRN
 from senaite.patient.permissions import FieldEditSex
+from senaite.patient.permissions import FieldEditTestId
 from senaite.patient.validators import TemporaryIdentifierValidator
 from zope.component import adapts
 from zope.interface import implementer
