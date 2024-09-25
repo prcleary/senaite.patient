@@ -76,6 +76,8 @@ class PatientFolderView(ListingView):
             ("mrn", {
                 "title": _("Medical Record #"),
                 "index": "patient_mrn"}),
+            ("testid", {
+                "title": _("Test Id"), }),
             ("identifiers", {
                 "title": _("Identifiers"), }),
             ("fullname", {
@@ -164,6 +166,9 @@ class PatientFolderView(ListingView):
         item["mrn"] = self.to_utf8(mrn)
         item["replace"]["mrn"] = get_link(url, value=mrn)
 
+        # Test Id
+        item["testid"] = obj.getTestid()
+        
         # Patient Identifiers
         identifiers = obj.getIdentifiers()
         item["identifiers"] = "<br>".join(

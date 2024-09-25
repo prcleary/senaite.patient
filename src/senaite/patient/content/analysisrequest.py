@@ -227,6 +227,7 @@ class AnalysisRequestSchemaExtender(object):
     def getFields(self):
         return [
             MedicalRecordNumberField,
+            TestIdField,
             PatientFullNameField,
             PatientAddressField,
             dob_field,

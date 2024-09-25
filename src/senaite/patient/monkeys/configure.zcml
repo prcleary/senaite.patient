@@ -19,6 +19,14 @@
     ignoreOriginal="True"
     replacement=".content.analysisrequest.getMedicalRecordNumberValue" />
 
+  <!-- Test Id -->
+  <monkey:patch
+    description="Test Id"
+    class="bika.lims.content.analysisrequest.AnalysisRequest"
+    original="getTestid"
+    ignoreOriginal="True"
+    replacement=".content.analysisrequest.getTestid" />
+
   <!-- Full Name -->
   <monkey:patch
     description="Patient's full name"
