@@ -32,6 +32,7 @@ from senaite.patient.api import get_patient_by_mrn
 from zope.component import adapts
 from zope.component import getMultiAdapter
 from zope.interface import implements
+from senaite.patient import logger
 
 # Statuses to add. List of dicts
 ADD_STATUSES = [{
