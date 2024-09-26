@@ -127,7 +127,6 @@ def get_patient_fields(instance):
     """
     mrn = instance.getMedicalRecordNumberValue()
     testid = instance.getField("TestId").get(instance)
-    logger.error("testid: %s" % testid)
     sex = instance.getField("Sex").get(instance)
     gender = instance.getField("Gender").get(instance)
     birthdate = instance.getField("DateOfBirth").get(instance)

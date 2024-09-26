@@ -109,6 +109,7 @@ def patient_searchable_text(instance):
     searchable_text_tokens = [
         instance.getEmail(),
         instance.getMRN(),
+        instance.getTestid(),
         instance.getFullname(),
         instance.getSexText(),
         instance.getGenderText(),
