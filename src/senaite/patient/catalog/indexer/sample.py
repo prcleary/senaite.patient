@@ -56,5 +56,6 @@ class ListingSearchableTextProvider(object):
         tokens = [
             self.context.getMedicalRecordNumberValue(),
             self.context.getPatientFullName(),
+            self.context.getTestid(),
         ]
         return filter(None, tokens)

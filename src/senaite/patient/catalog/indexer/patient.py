@@ -67,6 +67,11 @@ def patient_mrn(instance):
     """
     return instance.getMRN()
 
+@indexer(IPatient)
+def patient_testid(instance):
+    """Index Test Id
+    """
+    return instance.getTestid()
 
 @indexer(IPatient)
 def patient_fullname(instance):
