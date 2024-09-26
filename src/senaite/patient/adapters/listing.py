@@ -123,8 +123,6 @@ class SamplesListingAdapter(object):
         if not patient:
             return
 
-        item["Test Id"] = api.getTestid(patient)
-        
         # Link to patient object
         patient_url = api.get_url(patient)
         if sample_patient_mrn:
