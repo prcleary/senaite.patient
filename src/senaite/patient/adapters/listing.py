@@ -32,7 +32,6 @@ from senaite.patient.api import get_patient_by_mrn
 from zope.component import adapts
 from zope.component import getMultiAdapter
 from zope.interface import implements
-from senaite.patient import logger
 
 # Statuses to add. List of dicts
 ADD_STATUSES = [{
@@ -115,10 +114,8 @@ class SamplesListingAdapter(object):
         sample_patient_fullname = obj.getPatientFullName
 
         item["MRN"] = sample_patient_mrn
-        logger.error("obj.*: %r" % dir(obj))
-        logger.error("item.*: %r" % item)
-        item["Test Id"] = obj.getTestid()
         item["Patient"] = sample_patient_fullname
+
 
         # get the patient object
         patient = self.get_patient_by_mrn(sample_patient_mrn)
@@ -126,6 +123,8 @@ class SamplesListingAdapter(object):
         if not patient:
             return
 
+        item["Test Id"] = api.getTestid(patient)
+        
         # Link to patient object
         patient_url = api.get_url(patient)
         if sample_patient_mrn:
