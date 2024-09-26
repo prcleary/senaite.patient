@@ -111,11 +111,12 @@ class SamplesListingAdapter(object):
             item["after"].update({"getId": after_icons})
 
         sample_patient_mrn = obj.getMedicalRecordNumberValue
-        sample_patient_testid = obj.getTestid
         sample_patient_fullname = obj.getPatientFullName
 
         item["MRN"] = sample_patient_mrn
-        item["Test Id"] = sample_patient_testid
+        logger.error("obj.*: %r" % dir(obj))
+        logger.error("item.*: %r" % item)
+        item["Test Id"] = obj.getTestid()
         item["Patient"] = sample_patient_fullname
 
         # get the patient object
