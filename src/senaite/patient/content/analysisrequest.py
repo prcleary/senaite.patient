@@ -117,7 +117,7 @@ MedicalRecordNumberField = TemporaryIdentifierField(
     )
 )
 
-TestIdField = ExtTextField(
+TestIdField = StringField(
     "TestId",
     read_permission=View,
     write_permission=FieldEditTestId,
