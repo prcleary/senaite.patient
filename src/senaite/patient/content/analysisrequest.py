@@ -24,6 +24,7 @@ from archetypes.schemaextender.interfaces import ISchemaModifier
 from bika.lims.browser.widgets import SelectionWidget
 from bika.lims.interfaces import IAnalysisRequest
 from Products.Archetypes.Widget import TextAreaWidget
+from Products.Archetypes.Widget import StringWidget
 from Products.CMFCore.permissions import View
 from senaite.patient import messageFactory as _
 from senaite.patient.api import get_patient_name_entry_mode
@@ -117,14 +118,13 @@ MedicalRecordNumberField = TemporaryIdentifierField(
     )
 )
 
-TestIdField = TextField(
+TestIdField = ExtTextField(
     "TestId",
     read_permission=View,
     write_permission=FieldEditTestId,
-    widget=TextAreaWidget(
+    widget=StringWidget(
         label=_("Test Id"),
         render_own_label=True,
-        rows=1,
         visible={
             "add": "edit",
         }
