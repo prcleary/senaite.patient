@@ -48,7 +48,7 @@ from senaite.patient.permissions import FieldEditFullName
 from senaite.patient.permissions import FieldEditGender
 from senaite.patient.permissions import FieldEditMRN
 from senaite.patient.permissions import FieldEditSex
-from senaite.patient.permissions import FieldEditTestId
+from senaite.patient.permissions import FieldEditCNIC
 from senaite.patient.validators import TemporaryIdentifierValidator
 from zope.component import adapts
 from zope.interface import implementer
@@ -93,10 +93,10 @@ MedicalRecordNumberField = TemporaryIdentifierField(
                 "align": "left",
                 "label": _(u"MRN"),
             }, {
-                "name": "testid",
+                "name": "CNIC",
                 "width": "25",
                 "align": "left",
-                "label": _(u"Test Id"),
+                "label": _(u"CNIC"),
             }, {
                 "name": "firstname",
                 "width": "25",
@@ -118,12 +118,12 @@ MedicalRecordNumberField = TemporaryIdentifierField(
     )
 )
 
-TestIdField = ExtTextField(
-    "TestId",
+CNICField = ExtTextField(
+    "CNIC",
     read_permission=View,
-    write_permission=FieldEditTestId,
+    write_permission=FieldEditCNIC,
     widget=StringWidget(
-        label=_("Test Id"),
+        label=_("CNIC"),
         render_own_label=True,
         visible={
             "add": "edit",
@@ -227,7 +227,7 @@ class AnalysisRequestSchemaExtender(object):
     def getFields(self):
         return [
             MedicalRecordNumberField,
-            TestIdField,
+            CNICField,
             PatientFullNameField,
             PatientAddressField,
             dob_field,

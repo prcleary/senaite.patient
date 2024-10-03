@@ -111,9 +111,9 @@ class IPatientSchema(model.Schema):
         required=True,
     )
     
-    testid = schema.TextLine(
-        title=_(u"label_patient_testid", default=u"Test ID"),
-        description=_(u"Patient test ID"),
+    CNIC = schema.TextLine(
+        title=_(u"label_patient_CNIC", default=u"CNIC"),
+        description=_(u"Patient CNIC"),
         required=False,
     )
 
@@ -448,16 +448,16 @@ class Patient(Container):
         return mutator(self, api.safe_unicode(value))
 
     @security.protected(permissions.View)
-    def getTestid(self):
-        accessor = self.accessor("testid")
+    def getCNIC(self):
+        accessor = self.accessor("CNIC")
         value = accessor(self) or ""
         return value.encode("utf-8")
 
     @security.protected(permissions.ModifyPortalContent)
-    def setTestid(self, value):
+    def setCNIC(self, value):
         if not isinstance(value, string_types):
             value = u""
-        mutator = self.mutator("testid")
+        mutator = self.mutator("CNIC")
         mutator(self, api.safe_unicode(value.strip()))
 
     @security.protected(permissions.View)

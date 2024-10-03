@@ -61,8 +61,8 @@ ADD_COLUMNS = [
         "index": "medical_record_number",
         "after": "getId",
     }),
-    ("Test Id", {
-        "title": _("Test Id"),
+    ("CNIC", {
+        "title": _("CNIC"),
         "sortable": False,
         "after": "getId",
     }),
@@ -145,7 +145,7 @@ class SamplesListingAdapter(object):
             icon_args = {"width": 16, "title": api.to_utf8(msg % val)}
             item["after"]["Patient"] = self.icon_tag("info", **icon_args)
             
-        item["Test Id"] = patient.getTestid()
+        item["CNIC"] = patient.getCNIC()
 
     @viewcache
     def get_patient_by_mrn(self, mrn):

@@ -41,8 +41,8 @@ class PatientSampleAddView(BaseView):
             if not mrn:
                 return {"temporary": True, "value": ""}
             return {"temporary": False, "value": mrn}
-        elif name == "TestId":
-            address = self.context.getTestid()
+        elif name == "CNIC":
+            address = self.context.getCNIC()
         elif name == "PatientFullName":
             entry_mode = get_patient_name_entry_mode()
             if entry_mode == "parts":

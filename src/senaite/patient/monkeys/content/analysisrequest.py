@@ -45,10 +45,10 @@ def getMedicalRecordNumberValue(self):  # noqa camelcase, but compliant with AT'
     return mrn.get("value")
 
 @check_installed(None)
-def getTestid(self):  # noqa camelcase
-    """Returns the patient's test Id
+def getCNIC(self):  # noqa camelcase
+    """Returns the patient's CNIC
     """
-    return self.getField("TestId").get(self)
+    return self.getField("CNIC").get(self)
 
 @check_installed(None)
 def getPatientFullName(self):  # noqa camelcase

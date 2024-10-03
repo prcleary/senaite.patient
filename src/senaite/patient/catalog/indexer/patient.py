@@ -68,10 +68,10 @@ def patient_mrn(instance):
     return instance.getMRN()
 
 @indexer(IPatient)
-def patient_testid(instance):
-    """Index Test Id
+def patient_CNIC(instance):
+    """Index CNIC
     """
-    return instance.getTestid()
+    return instance.getCNIC()
 
 @indexer(IPatient)
 def patient_fullname(instance):
@@ -114,7 +114,7 @@ def patient_searchable_text(instance):
     searchable_text_tokens = [
         instance.getEmail(),
         instance.getMRN(),
-        instance.getTestid(),
+        instance.getCNIC(),
         instance.getFullname(),
         instance.getSexText(),
         instance.getGenderText(),

@@ -86,7 +86,7 @@ WORKFLOW_TO_UPDATE = {
                     # Field permissions (read-only)
                     permissions.FieldEditDateOfBirth: (),
                     permissions.FieldEditMRN: (),
-                    permissions.FieldEditTestId: (),
+                    permissions.FieldEditCNIC: (),
                     permissions.FieldEditAddress: (),
                     permissions.FieldEditFullName: (),
                     permissions.FieldEditSex: (),
@@ -99,7 +99,7 @@ WORKFLOW_TO_UPDATE = {
                     # Field permissions (read-only)
                     permissions.FieldEditDateOfBirth: (),
                     permissions.FieldEditMRN: (),
-                    permissions.FieldEditTestId: (),
+                    permissions.FieldEditCNIC: (),
                     permissions.FieldEditAddress: (),
                     permissions.FieldEditFullName: (),
                     permissions.FieldEditSex: (),
@@ -112,7 +112,7 @@ WORKFLOW_TO_UPDATE = {
                     # Field permissions (read-only)
                     permissions.FieldEditDateOfBirth: (),
                     permissions.FieldEditMRN: (),
-                    permissions.FieldEditTestId: (),
+                    permissions.FieldEditCNIC: (),
                     permissions.FieldEditAddress: (),
                     permissions.FieldEditFullName: (),
                     permissions.FieldEditSex: (),
@@ -125,7 +125,7 @@ WORKFLOW_TO_UPDATE = {
                     # Field permissions (read-only)
                     permissions.FieldEditDateOfBirth: (),
                     permissions.FieldEditMRN: (),
-                    permissions.FieldEditTestId: (),
+                    permissions.FieldEditCNIC: (),
                     permissions.FieldEditAddress: (),
                     permissions.FieldEditFullName: (),
                     permissions.FieldEditSex: (),
@@ -138,7 +138,7 @@ WORKFLOW_TO_UPDATE = {
                     # Field permissions (read-only)
                     permissions.FieldEditDateOfBirth: (),
                     permissions.FieldEditMRN: (),
-                    permissions.FieldEditTestId: (),
+                    permissions.FieldEditCNIC: (),
                     permissions.FieldEditAddress: (),
                     permissions.FieldEditFullName: (),
                     permissions.FieldEditSex: (),
@@ -151,7 +151,7 @@ WORKFLOW_TO_UPDATE = {
                     # Field permissions (read-only)
                     permissions.FieldEditDateOfBirth: (),
                     permissions.FieldEditMRN: (),
-                    permissions.FieldEditTestId: (),
+                    permissions.FieldEditCNIC: (),
                     permissions.FieldEditAddress: (),
                     permissions.FieldEditFullName: (),
                     permissions.FieldEditSex: (),

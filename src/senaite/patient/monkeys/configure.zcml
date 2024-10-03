@@ -19,13 +19,13 @@
     ignoreOriginal="True"
     replacement=".content.analysisrequest.getMedicalRecordNumberValue" />
 
-  <!-- Test Id -->
+  <!-- CNIC -->
   <monkey:patch
-    description="Test Id"
+    description="CNIC"
     class="bika.lims.content.analysisrequest.AnalysisRequest"
-    original="getTestid"
+    original="getCNIC"
     ignoreOriginal="True"
-    replacement=".content.analysisrequest.getTestid" />
+    replacement=".content.analysisrequest.getCNIC" />
 
   <!-- Full Name -->
   <monkey:patch
